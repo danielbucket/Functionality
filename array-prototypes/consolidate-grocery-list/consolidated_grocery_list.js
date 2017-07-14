@@ -1,23 +1,25 @@
-var itemsList = [
-  { name: 'khan',
-    groceryList: [ 'avocados', 'chicken', 'tortillas', 'rice' ] },
-  { name: 'conan',
-    groceryList: ['chips', 'kale', 'cheese', 'tortillas', 'rice'] },
-  { name: 'carol',
-    groceryList: ['chips', 'eggs', 'tomatoes', 'tortillas', 'rice'] },
-  { name: 'barbarella',
-    groceryList: ['chips', 'fish_dicks', 'chicken', 'marijuana'] }
-];
+const shitWindsList = [
+  { name: 'ricky',
+    shitList: [ 'chicken chips', 'piss jugs', 'liquor', 'grade 6', 'hashcoins' ] },
+  { name: 'bubbles',
+    shitList: ['swazy train', 'kitties', 'cheese', 'liquor', 'grade 6'] },
+  { name: 'julian',
+    shitList: ['swazy train', 'dirty burger', 'whiskey', 'liquor', 'grade 6'] },
+  { name: 'fuckin phil collins',
+    shitList: ['swazy train', 'dirty burger', 'piss jugs', 'baaaam!'] },
+  { name: 'ray',
+    shitList: ['pepperoni', 'liquor', 'piss jugs', 'way she goes'] }
+]
 
-const consolidated = (list) => {
+const consolidatedWindsOfShitList = (list) => {
   let numberedList = list.reduce( (newList, curVal) => {
-    curVal.groceryList.forEach( (groceryItem) => {
+    console.log(curVal.shitList)
+    curVal.shitList.forEach( (groceryItem) => {
       !newList[groceryItem] ? newList[groceryItem]=1 : newList[groceryItem]++
     });
-
     return newList;
   }, []);
   return numberedList;
-};
+}
 
-consolidated(itemsList);
+consolidatedWindsOfShitList(shitWindsList)
